@@ -288,24 +288,31 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
   color: var(--text-muted);
 }
 
 .breadcrumb-item {
   display: inline-flex;
   align-items: center;
+  transition: color 0.3s ease;
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
-  content: "›";
-  margin: 0 0.5rem;
-  color: var(--text-muted);
-  font-weight: 400;
+  content: "/";
+  margin: 0 0.65rem;
+  color: rgba(255, 255, 255, 0.15);
+  font-weight: 300;
 }
 
 .breadcrumb-item a {
   color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .breadcrumb-item a:hover {
@@ -314,7 +321,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .breadcrumb-item--current {
   color: var(--gold);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* Home Hero Section */
@@ -2167,19 +2174,19 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Migas de Pan (Breadcrumb) en Desayunos */
 .menu-page--breakfast .breadcrumb-item a {
-  color: #7c6c5e !important;
+  color: #8c7a6b !important;
 }
 
 .menu-page--breakfast .breadcrumb-item a:hover {
   color: #2b221a !important;
 }
 
-.menu-page--breakfast .breadcrumb-item.active {
+.menu-page--breakfast .breadcrumb-item--current {
   color: #9c7426 !important;
 }
 
-.menu-page--breakfast .breadcrumb-separator {
-  color: #b5a79a !important;
+.menu-page--breakfast .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(43, 34, 26, 0.2) !important;
 }
 
 /* Columnas de Opciones de Platillo (Guisos, Salsas, etc.) */
@@ -2280,9 +2287,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #e93d3d !important;
 }
 
-.menu-page--asian .breadcrumb-item.active,
 .menu-page--asian .breadcrumb-item--current {
   color: #e93d3d !important;
+}
+
+.menu-page--asian .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(233, 61, 61, 0.25) !important;
 }
 
 /* Botón Hacer Pedido en rojo para Comida Asiática */
