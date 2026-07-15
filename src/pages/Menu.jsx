@@ -320,6 +320,14 @@ function Menu() {
             )}
           </div>
         </section>
+        {/* Wavy green relief curves for breakfasts */}
+        {activeMainTab === 'desayuno' && (
+          <div className="breakfast-bg-curves" aria-hidden="true">
+            <div className="breakfast-curve-left"></div>
+            <div className="breakfast-curve-right-1"></div>
+            <div className="breakfast-curve-right-2"></div>
+          </div>
+        )}
       </main>
 
       <Footer />

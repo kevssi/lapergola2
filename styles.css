@@ -277,6 +277,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Breadcrumbs */
 .breadcrumb {
+  position: relative;
+  z-index: 5;
   margin: 1.5rem 0 0.5rem;
   padding: 0;
 }
@@ -1745,6 +1747,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .menu-interactive-section {
+  position: relative;
+  z-index: 5;
   padding: 2rem 0 5rem;
 }
 
@@ -1863,6 +1867,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Pestañas Principales en la Vista Unificada (Desayunos vs Asiatico) */
 .menu-main-tabs-section {
+  position: relative;
+  z-index: 5;
   padding: 2.5rem 0 1.5rem;
   display: flex;
   justify-content: center;
@@ -1930,6 +1936,7 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 100vh;
   transition: background 0.6s cubic-bezier(0.4, 0, 0.2, 1), background-image 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  overflow-x: hidden !important;
   --menu-accent: var(--gold);
   --menu-accent-rgb: 212, 175, 55;
   background-color: var(--bg-dark);
@@ -2365,3 +2372,89 @@ h1, h2, h3, h4, h5, h6 {
 .site-header--breakfast + .mobile-menu-overlay svg {
   color: #9c7426 !important;
 }
+
+/* ==========================================================================
+   Decoraciones de Bordes y Orillas del Menú (Rojo Asiático & Verde Desayuno)
+   ========================================================================== */
+
+/* 1. Orillas rojas con el sello Zen en el Menú Asiático */
+.menu-page--asian::before {
+  content: "";
+  position: absolute;
+  top: 18%;
+  left: -120px;
+  width: 380px;
+  height: 380px;
+  background-image: url('/images/logo_seal.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 1;
+  transform: rotate(-10deg);
+}
+
+.menu-page--asian::after {
+  content: "";
+  position: absolute;
+  bottom: 22%;
+  right: -120px;
+  width: 420px;
+  height: 420px;
+  background-image: url('/images/logo_seal.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 1;
+  transform: rotate(170deg);
+}
+
+/* 2. Ondas y relieves verdes en el Menú de Desayunos */
+.breakfast-bg-curves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 380px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.breakfast-curve-left {
+  position: absolute;
+  bottom: -130px;
+  left: -130px;
+  width: 480px;
+  height: 420px;
+  background: #465b30;
+  border-radius: 40% 60% 0% 0% / 50% 50% 0% 0%;
+  transform: rotate(12deg);
+  opacity: 0.9;
+}
+
+.breakfast-curve-right-1 {
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 620px;
+  height: 480px;
+  background: #3e502a;
+  border-radius: 65% 35% 0% 0% / 55% 45% 0% 0%;
+  transform: rotate(-12deg);
+  opacity: 0.95;
+}
+
+.breakfast-curve-right-2 {
+  position: absolute;
+  bottom: -150px;
+  right: 140px;
+  width: 520px;
+  height: 420px;
+  background: #5b753f;
+  border-radius: 50% 50% 0% 0% / 40% 40% 0% 0%;
+  transform: rotate(-5deg);
+  opacity: 0.8;
+}
+
