@@ -190,8 +190,13 @@ function Menu() {
             ) : hasContent ? (
               <div>
                 {/* Secciones de Platillos */}
-                {Object.entries(groupedDishes).map(([catName, list]) => (
-                  <div key={catName} className="menu-category-group">
+                {Object.entries(groupedDishes).map(([catName, list], index) => (
+                  <div key={catName} className="menu-category-group" style={{ position: 'relative' }}>
+                    {activeMainTab === 'asiatico' && (
+                      <div className={`category-seal-watermark category-seal-watermark--${index % 2 === 0 ? 'left' : 'right'}`} aria-hidden="true">
+                        <img src="/images/logo_seal.png" alt="" />
+                      </div>
+                    )}
                     <h2 className="menu-category-subtitle">{catName}</h2>
                     <div className="menu-text-list">
                       {list.map((dish) => {
