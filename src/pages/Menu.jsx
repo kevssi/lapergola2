@@ -98,7 +98,7 @@ function Menu() {
         { id: 'sushi', name: 'Sushi & Rollos Especiales', types: ['Sushi Natural', 'Sushi Empanizado', 'Sushi Gratinado'] },
         { id: 'ramen', name: 'Ramen Casero', types: ['Ramen'] },
         { id: 'teriyaki', name: 'Teriyaki & Bento Box', types: ['Teriyaki', 'Bento Box'] },
-        { id: 'noodles', name: 'Noodles al Wok', types: ['Noodles'] },
+        { id: 'noodles', name: 'Noodles', types: ['Noodles'] },
         { id: 'especialidades', name: 'Especialidades Asiáticas', types: ['Especialidad Asiática'] },
         { id: 'kids', name: 'Menú Kids', types: ['Menú Kids'] },
       ];
