@@ -2394,39 +2394,99 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
 }
 
-.breakfast-curve-top-right {
+.breakfast-curve-1 {
   position: absolute;
   top: 100px;
-  right: -150px;
-  width: 320px;
+  left: -130px;
+  width: 280px;
   height: 280px;
-  background: #5b753f;
-  border-radius: 0 0 0 160px;
-  transform: rotate(5deg);
+  background: #465b30;
+  border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+  transform: rotate(-10deg);
   opacity: 0.85;
 }
 
-.breakfast-curve-mid-left {
+.breakfast-curve-2 {
   position: absolute;
-  top: 32%;
+  top: 280px;
+  right: -140px;
+  width: 310px;
+  height: 250px;
+  background: #5b753f;
+  border-radius: 30% 70% 40% 60% / 50% 60% 40% 50%;
+  transform: rotate(15deg);
+  opacity: 0.85;
+}
+
+.breakfast-curve-3 {
+  position: absolute;
+  top: 22%;
   left: -150px;
-  width: 350px;
+  width: 340px;
   height: 300px;
-  background: #465b30;
-  border-radius: 0 150px 150px 0;
-  transform: rotate(-10deg);
+  background: #3e502a;
+  border-radius: 80% 20% 80% 20% / 80% 20% 80% 20%;
+  transform: rotate(-25deg);
   opacity: 0.9;
 }
 
-.breakfast-curve-mid-right {
+.breakfast-curve-4 {
   position: absolute;
-  top: 65%;
-  right: -160px;
-  width: 380px;
+  top: 35%;
+  right: -130px;
+  width: 290px;
   height: 320px;
+  background: #465b30;
+  border-radius: 20% 80% 20% 80% / 20% 80% 20% 80%;
+  transform: rotate(20deg);
+  opacity: 0.85;
+}
+
+.breakfast-curve-5 {
+  position: absolute;
+  top: 48%;
+  left: -170px;
+  width: 380px;
+  height: 310px;
+  background: #5b753f;
+  border-radius: 70% 30% 50% 50% / 60% 40% 60% 40%;
+  transform: rotate(-15deg);
+  opacity: 0.85;
+}
+
+.breakfast-curve-6 {
+  position: absolute;
+  top: 60%;
+  right: -150px;
+  width: 350px;
+  height: 350px;
   background: #3e502a;
-  border-radius: 160px 0 0 160px;
-  transform: rotate(10deg);
+  border-radius: 40% 60% 30% 70% / 50% 50% 50% 50%;
+  transform: rotate(12deg);
+  opacity: 0.85;
+}
+
+.breakfast-curve-7 {
+  position: absolute;
+  top: 73%;
+  left: -140px;
+  width: 330px;
+  height: 290px;
+  background: #465b30;
+  border-radius: 50% 50% 70% 30% / 40% 60% 40% 60%;
+  transform: rotate(-8deg);
+  opacity: 0.9;
+}
+
+.breakfast-curve-8 {
+  position: absolute;
+  top: 85%;
+  right: -160px;
+  width: 360px;
+  height: 310px;
+  background: #5b753f;
+  border-radius: 60% 40% 40% 60% / 60% 60% 40% 40%;
+  transform: rotate(8deg);
   opacity: 0.85;
 }
 
