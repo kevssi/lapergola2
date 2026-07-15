@@ -181,7 +181,6 @@ function App() {
                 <span>LOS MARTES</span>
               </div>
             </div>
-            <p className="hours-footnote">* Abierto todos los días de la semana para comedor y envíos.</p>
           </div>
 
           <div className="contact-home-card glass">
