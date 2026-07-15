@@ -160,11 +160,11 @@ function Menu() {
         {/* Dynamic staggered watermarks for Asian menu */}
         {activeMainTab === 'asiatico' && (
           <div className="asian-watermarks-container" aria-hidden="true">
-            {Array.from({ length: 16 }).map((_, index) => {
-              const topPos = index * 450 + 100;
+            {Array.from({ length: 40 }).map((_, index) => {
+              const topPos = index * 220 + 80;
               const side = index % 2 === 0 ? 'left' : 'right';
               const rotation = (index * 53) % 360;
-              const scale = 0.85 + (index % 3) * 0.1;
+              const scale = 0.8 + (index % 3) * 0.1;
               return (
                 <div
                   key={index}
