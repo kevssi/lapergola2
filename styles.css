@@ -2433,12 +2433,12 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.8;
 }
 
-/* Alternating category seal watermarks for Asian menu layout */
+/* Staggered category seal watermarks for Asian menu layout */
 .category-seal-watermark {
   position: absolute;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.035;
+  opacity: 0.025;
   transition: opacity 0.3s ease;
 }
 
@@ -2448,42 +2448,8 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 
-.category-seal-watermark--left {
-  top: -20px;
-  left: -140px;
-  width: 280px;
-  transform: rotate(-10deg);
-}
-
-.category-seal-watermark--right {
-  top: -30px;
-  right: -140px;
-  width: 320px;
-  transform: rotate(170deg);
-}
-
-/* Responsive adjustments to prevent overlap and text clipping */
-@media (max-width: 960px) {
-  .category-seal-watermark--left {
-    left: -80px;
-    width: 200px;
-  }
-  .category-seal-watermark--right {
-    right: -80px;
-    width: 220px;
-  }
-}
-
 @media (max-width: 640px) {
   .category-seal-watermark {
-    opacity: 0.02;
-  }
-  .category-seal-watermark--left {
-    left: -50px;
-    width: 140px;
-  }
-  .category-seal-watermark--right {
-    right: -50px;
-    width: 150px;
+    opacity: 0.012;
   }
 }
