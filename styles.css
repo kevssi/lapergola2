@@ -2438,7 +2438,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.025;
+  opacity: 0.055;
   transition: opacity 0.3s ease;
 }
 
@@ -2450,6 +2450,6 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 640px) {
   .category-seal-watermark {
-    opacity: 0.012;
+    opacity: 0.03;
   }
 }
