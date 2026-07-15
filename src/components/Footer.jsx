@@ -25,17 +25,6 @@ function Footer() {
         </div>
         
         <div className="footer-col">
-          <h4>Horarios de Servicio</h4>
-          <ul className="footer-hours">
-            <li><strong>Desayuno y comida mexicana:</strong> Lunes a Domingo,<br />8:00 AM - 2:00 PM</li>
-            <li style={{ marginTop: '0.5rem' }}><strong>Comida Asiática:</strong> Lunes a Domingo,<br />1:00 PM - 9:00 PM</li>
-            <li style={{ color: 'var(--accent-red)', fontWeight: 'bold', marginTop: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
-              <Clock size={16} /> CERRADO LOS MARTES
-            </li>
-          </ul>
-        </div>
-
-        <div className="footer-col">
           <h4>Pedidos & Contacto</h4>
           <p className="footer-contact-info" style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
             <span style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>

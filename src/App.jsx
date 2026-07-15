@@ -5,6 +5,7 @@ import Breadcrumb from './components/Breadcrumb.jsx';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import { construirSiguienteEnlace } from './utils/breadcrumbHistory.js';
+import { Target, Compass, Clock, Truck } from 'lucide-react';
 
 const sectionIds = ['inicio', 'concepto', 'mision-vision', 'contacto'];
 
@@ -124,7 +125,7 @@ function App() {
             <p>
               Por las mañanas, disfruta de la frescura de nuestros desayunos clásicos y regionales. Por la tarde, nuestra cocina se transforma para dar paso al fuego del wok y la delicadeza del vapor asiático, offering sabores intensos y auténticos.
             </p>
-            <div className="concept-links" style={{ marginTop: '2rem', display: 'flex', gap: '1rem' }}>
+            <div className="concept-links concept-actions">
               <Link to={construirSiguienteEnlace('/desayuno', '/')} className="btn btn-outline">Ver Menú Desayunos</Link>
               <Link to={construirSiguienteEnlace('/asiatico', '/')} className="btn btn-outline">Ver Menú Asiático</Link>
             </div>
@@ -141,20 +142,39 @@ function App() {
       {/* Misión y Visión Section */}
       <section className="concept-section" id="mision-vision" style={{ borderTop: '1px solid rgba(255, 255, 255, 0.05)', background: 'var(--bg-dark)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
-            <div className="glass" style={{ padding: '2.5rem' }}>
-              <span className="section-eyebrow">Nuestra Razón de Ser</span>
-              <h3 style={{ fontSize: '1.75rem', marginBottom: '1rem', color: 'var(--gold)' }}>Misión</h3>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: '1.7', margin: 0 }}>
-                “Servir alimentos frescos y deliciosos con rapidez, calidad y atención excepcional, superando las expectativas de cada cliente.”
-              </p>
+          <div className="mission-vision-grid">
+            {/* Misión Card */}
+            <div className="glass mission-vision-card">
+              <div className="card-icon-glow">
+                <Target size={240} />
+              </div>
+              <div className="card-content">
+                <span className="section-eyebrow">Nuestra Razón de Ser</span>
+                <div className="card-title-group">
+                  <Target size={28} className="card-title-icon" />
+                  <h3>Misión</h3>
+                </div>
+                <p>
+                  “Servir alimentos frescos y deliciosos con rapidez, calidad y atención excepcional, superando las expectativas de cada cliente.”
+                </p>
+              </div>
             </div>
-            <div className="glass" style={{ padding: '2.5rem' }}>
-              <span className="section-eyebrow">Nuestro Destino</span>
-              <h3 style={{ fontSize: '1.75rem', marginBottom: '1rem', color: 'var(--gold)' }}>Visión</h3>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: '1.7', margin: 0 }}>
-                “Ser el restaurante favorito de nuestra comunidad, reconocido por la calidad de nuestros alimentos, la excelencia en el servicio y un ambiente acogedor que inspire a nuestros clientes a regresar una y otra vez.”
-              </p>
+
+            {/* Visión Card */}
+            <div className="glass mission-vision-card">
+              <div className="card-icon-glow">
+                <Compass size={240} />
+              </div>
+              <div className="card-content">
+                <span className="section-eyebrow">Nuestro Destino</span>
+                <div className="card-title-group">
+                  <Compass size={28} className="card-title-icon" />
+                  <h3>Visión</h3>
+                </div>
+                <p>
+                  “Ser el restaurante favorito de nuestra comunidad, reconocido por la calidad de nuestros alimentos, la excelencia en el servicio y un ambiente acogedor que inspire a nuestros clientes a regresar una y otra vez.”
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -165,31 +185,49 @@ function App() {
       {/* Contact / Map Info Section */}
       <section className="contact-home-section" id="contacto">
         <div className="container contact-home-grid">
-          <div className="contact-home-card glass">
-            <h3>Horarios de Servicio</h3>
-            <div className="hours-block">
-              <div className="hours-row">
-                <strong>Desayuno y comida mexicana</strong>
-                <span>8:00 AM – 2:00 PM</span>
+          {/* Horarios de Servicio Card */}
+          <div className="contact-home-card glass mission-vision-card">
+            <div className="card-icon-glow">
+              <Clock size={240} />
+            </div>
+            <div className="card-content">
+              <div className="card-title-group">
+                <Clock size={28} className="card-title-icon" />
+                <h3>Horarios de Servicio</h3>
               </div>
-              <div className="hours-row">
-                <strong>Comida Asiática</strong>
-                <span>1:00 PM – 9:00 PM</span>
-              </div>
-              <div className="hours-row" style={{ border: 'none', color: 'var(--accent-red)', fontWeight: 'bold' }}>
-                <strong>CERRADO</strong>
-                <span>LOS MARTES</span>
+              <div className="hours-block">
+                <div className="hours-row">
+                  <strong>Desayuno y comida mexicana</strong>
+                  <span>8:00 AM – 2:00 PM</span>
+                </div>
+                <div className="hours-row">
+                  <strong>Comida Asiática</strong>
+                  <span>1:00 PM – 9:00 PM</span>
+                </div>
+                <div className="hours-row" style={{ border: 'none', color: 'var(--accent-red)', fontWeight: 'bold' }}>
+                  <strong>CERRADO</strong>
+                  <span>LOS MARTES</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="contact-home-card glass">
-            <h3>Pedidos y Entregas</h3>
-            <p>Disfruta de nuestros platillos directamente en tu hogar. Haz tu pedido a domicilio o para pasar a recoger por llamada o mensaje.</p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1.5rem' }}>
-              <a href="https://wa.me/526531751276" className="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" style={{ justifyContent: 'center' }}>
-                Llamar o WhatsApp: 653 175 1276
-              </a>
+          {/* Pedidos y Entregas Card */}
+          <div className="contact-home-card glass mission-vision-card">
+            <div className="card-icon-glow">
+              <Truck size={240} />
+            </div>
+            <div className="card-content">
+              <div className="card-title-group">
+                <Truck size={28} className="card-title-icon" />
+                <h3>Pedidos y Entregas</h3>
+              </div>
+              <p>Disfruta de nuestros platillos directamente en tu hogar. Haz tu pedido a domicilio o para pasar a recoger por llamada o mensaje.</p>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1.5rem' }}>
+                <a href="https://wa.me/526531751276" className="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" style={{ justifyContent: 'center' }}>
+                  Llamar o WhatsApp: 653 175 1276
+                </a>
+              </div>
             </div>
           </div>
         </div>

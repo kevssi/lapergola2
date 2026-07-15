@@ -340,6 +340,17 @@ h1, h2, h3, h4, h5, h6 {
   padding: 3rem;
   text-align: center;
   margin-inline: auto;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+}
+
+.home-hero__content:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+.home-hero__content.glass {
+  background: rgba(12, 12, 11, 0.7);
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
 .hero-logo-img {
@@ -358,10 +369,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .home-hero__sub {
-  color: var(--text-secondary);
-  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-size: 1.15rem;
   margin-bottom: 2rem;
-  line-height: 1.6;
+  line-height: 1.65;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 /* Concept Section */
@@ -951,7 +963,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1.2fr 1.2fr 1fr;
+  grid-template-columns: 1.5fr 1.2fr 1fr;
   gap: 3rem;
   margin-bottom: 4rem;
 }
@@ -1035,6 +1047,190 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+/* Mobile menu styles and toggle */
+.mobile-menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 300;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.mobile-menu-toggle:hover {
+  color: var(--gold);
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  top: var(--header-h);
+  background: rgba(12, 12, 11, 0.97);
+  backdrop-filter: blur(25px) saturate(160%);
+  -webkit-backdrop-filter: blur(25px) saturate(160%);
+  z-index: 250;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 2rem;
+  gap: 2.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+}
+
+.mobile-menu-overlay--open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mobile-menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mobile-menu-nav .nav-link {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 0.75rem;
+  transition: all 0.2s ease;
+  display: block;
+}
+
+.mobile-menu-nav .nav-link:hover,
+.mobile-menu-nav .nav-link--active {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+  padding-left: 0.5rem;
+}
+
+.mobile-menu-nav .nav-link--active-asian {
+  color: var(--accent-red) !important;
+  border-bottom-color: var(--accent-red) !important;
+}
+
+.mobile-menu-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 2rem;
+}
+
+.mobile-menu-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.mobile-menu-contact-info p {
+  margin: 0;
+}
+
+/* Grids y Layouts Adaptativos del Home */
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.mission-vision-card {
+  position: relative;
+  overflow: hidden;
+  padding: 2.5rem;
+}
+
+.mission-vision-card .card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.card-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.card-title-group h3 {
+  font-size: 1.75rem;
+  margin: 0 !important;
+  color: var(--gold);
+}
+
+.card-title-icon {
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.mission-vision-card .card-icon-glow {
+  position: absolute;
+  right: -45px;
+  bottom: -45px;
+  color: var(--gold);
+  opacity: 0.08;
+  pointer-events: none;
+  transform: rotate(-15deg);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.mission-vision-card:hover .card-icon-glow {
+  transform: scale(1.08) rotate(-5deg);
+  opacity: 0.14;
+}
+
+.mission-vision-card p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.concept-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .concept-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .concept-actions .btn {
+    width: 100%;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+  .hero-actions .btn {
+    width: 100%;
+  }
+}
+
 /* Responsividad */
 
 /* Tablets */
@@ -1066,6 +1262,31 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  .main-nav {
+    display: none !important;
+  }
+  
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .header-inner {
+    padding: 0 1.25rem;
+  }
+
+  .mission-vision-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
 /* Móviles */
 @media (max-width: 640px) {
   :root {
@@ -1081,22 +1302,10 @@ h1, h2, h3, h4, h5, h6 {
     height: 32px;
   }
   
-  .main-nav {
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    padding-bottom: 0.25rem;
-    -webkit-overflow-scrolling: touch;
-    width: 100%;
-  }
-  
-  .main-nav a {
-    padding: 0.45rem 0.75rem;
-    font-size: 0.85rem;
-  }
-  
   .btn-reserve {
-    display: none !important; /* Esconder botón en celulares para que quepa en el nav */
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+    min-height: 32px;
   }
   
   .home-hero__content {
@@ -1147,13 +1356,53 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1.5rem;
   }
   
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
   .site-footer {
     padding: 3rem 0 1.5rem;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  .brand-col {
+    margin-bottom: 0.5rem;
+  }
+  
+  .site-footer .footer-logo-img {
+    height: 40px !important;
+    width: auto !important;
+  }
+  
+  .footer-tagline {
+    font-size: 0.85rem;
+  }
+  
+  .footer-col h4 {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.35rem;
+  }
+  
+  .footer-contact-info {
+    font-size: 0.85rem;
+  }
+  
+  .footer-grid > :nth-child(3) {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .footer-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+  }
+  
+  .footer-links a {
+    font-size: 0.85rem;
   }
   
   .dish-detail__image-container {
@@ -1654,6 +1903,7 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 
 .menu-page {
+  display: flow-root !important;
   min-height: 100vh;
   transition: background 0.6s cubic-bezier(0.4, 0, 0.2, 1), background-image 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -1926,6 +2176,13 @@ h1, h2, h3, h4, h5, h6 {
   border-top: 1px dashed rgba(255, 255, 255, 0.1);
 }
 
+@media (max-width: 576px) {
+  .menu-dish-columns {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
 .menu-dish-column-title {
   color: var(--menu-accent, var(--gold));
   font-size: 0.9rem;
@@ -2027,8 +2284,58 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-2px);
 }
 
+/* ==========================================================================
+   Header Especial para Desayunos (Tema Claro Crema/Beige)
+   ========================================================================== */
 
+.site-header--breakfast {
+  background: rgba(250, 247, 242, 0.92) !important;
+  border-bottom: 1px solid rgba(43, 34, 26, 0.12) !important;
+  box-shadow: 0 4px 16px rgba(43, 34, 26, 0.06) !important;
+}
 
+.site-header--breakfast .logo-img {
+  filter: brightness(0.15) !important;
+}
 
+.site-header--breakfast .main-nav a {
+  color: #5c4e43 !important;
+}
 
+.site-header--breakfast .main-nav a:hover {
+  color: #2b221a !important;
+  background: rgba(43, 34, 26, 0.05) !important;
+}
 
+.site-header--breakfast .main-nav a.nav-link--active {
+  color: #9c7426 !important;
+  background: rgba(156, 116, 38, 0.08) !important;
+}
+
+.site-header--breakfast .mobile-menu-toggle {
+  color: #2b221a !important;
+}
+
+/* Adaptación del Drawer de navegación móvil para Desayunos */
+.site-header--breakfast + .mobile-menu-overlay {
+  background: rgba(250, 247, 242, 0.98) !important;
+}
+
+.site-header--breakfast + .mobile-menu-overlay .nav-link {
+  color: #5c4e43 !important;
+  border-bottom-color: rgba(43, 34, 26, 0.06) !important;
+}
+
+.site-header--breakfast + .mobile-menu-overlay .nav-link:hover,
+.site-header--breakfast + .mobile-menu-overlay .nav-link--active {
+  color: #9c7426 !important;
+  border-bottom-color: #9c7426 !important;
+}
+
+.site-header--breakfast + .mobile-menu-overlay .mobile-menu-contact-info {
+  color: #8c7a6b !important;
+}
+
+.site-header--breakfast + .mobile-menu-overlay svg {
+  color: #9c7426 !important;
+}
