@@ -2388,13 +2388,46 @@ h1, h2, h3, h4, h5, h6 {
 /* 2. Ondas y relieves verdes en el Menú de Desayunos */
 .breakfast-bg-curves {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 380px;
+  inset: 0;
   overflow: hidden;
   pointer-events: none;
   z-index: 1;
+}
+
+.breakfast-curve-top-right {
+  position: absolute;
+  top: 100px;
+  right: -150px;
+  width: 320px;
+  height: 280px;
+  background: #5b753f;
+  border-radius: 0 0 0 160px;
+  transform: rotate(5deg);
+  opacity: 0.85;
+}
+
+.breakfast-curve-mid-left {
+  position: absolute;
+  top: 32%;
+  left: -150px;
+  width: 350px;
+  height: 300px;
+  background: #465b30;
+  border-radius: 0 150px 150px 0;
+  transform: rotate(-10deg);
+  opacity: 0.9;
+}
+
+.breakfast-curve-mid-right {
+  position: absolute;
+  top: 65%;
+  right: -160px;
+  width: 380px;
+  height: 320px;
+  background: #3e502a;
+  border-radius: 160px 0 0 160px;
+  transform: rotate(10deg);
+  opacity: 0.85;
 }
 
 .breakfast-curve-left {

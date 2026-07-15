@@ -351,6 +351,9 @@ function Menu() {
         {/* Wavy green relief curves for breakfasts */}
         {activeMainTab === 'desayuno' && (
           <div className="breakfast-bg-curves" aria-hidden="true">
+            <div className="breakfast-curve-top-right"></div>
+            <div className="breakfast-curve-mid-left"></div>
+            <div className="breakfast-curve-mid-right"></div>
             <div className="breakfast-curve-left"></div>
             <div className="breakfast-curve-right-1"></div>
             <div className="breakfast-curve-right-2"></div>
