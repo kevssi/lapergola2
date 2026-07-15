@@ -123,7 +123,7 @@ function App() {
               En <strong>La Pergola</strong> creemos que cada momento del día merece su propio ritual. Por eso, hemos diseñado una experiencia dual que se adapta al curso del sol.
             </p>
             <p>
-              Por las mañanas, disfruta de la frescura de nuestros desayunos clásicos y regionales. Por la tarde, nuestra cocina se transforma para dar paso al fuego del wok y la delicadeza del vapor asiático, offering sabores intensos y auténticos.
+              Por las mañanas, disfruta de la frescura de nuestros desayunos clásicos y regionales. Por la tarde, nuestra cocina se transforma para dar paso al fuego del wok y la delicadeza del vapor asiático, ofreciendo sabores intensos y auténticos.
             </p>
             <div className="concept-links concept-actions">
               <Link to={construirSiguienteEnlace('/desayuno', '/')} className="btn btn-outline">Ver Menú Desayunos</Link>
