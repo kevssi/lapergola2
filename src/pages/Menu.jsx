@@ -157,6 +157,30 @@ function Menu() {
       <main className={`menu-page ${activeMainTab === 'desayuno' ? 'menu-page--breakfast' : 'menu-page--asian'}`}>
         <Breadcrumb items={breadcrumbItems} />
 
+        {/* Dynamic staggered watermarks for Asian menu */}
+        {activeMainTab === 'asiatico' && (
+          <div className="asian-watermarks-container" aria-hidden="true">
+            {Array.from({ length: 16 }).map((_, index) => {
+              const topPos = index * 450 + 100;
+              const side = index % 2 === 0 ? 'left' : 'right';
+              const rotation = (index * 53) % 360;
+              const scale = 0.85 + (index % 3) * 0.1;
+              return (
+                <div
+                  key={index}
+                  className={`category-seal-watermark category-seal-watermark--${side}`}
+                  style={{
+                    top: `${topPos}px`,
+                    transform: `rotate(${rotation}deg) scale(${scale})`,
+                  }}
+                >
+                  <img src="/images/logo_seal.png" alt="" />
+                </div>
+              );
+            })}
+          </div>
+        )}
+
         {/* Pestañas Principales (Selector de Menús) */}
         <section className="menu-main-tabs-section">
           <div className="container">
@@ -190,13 +214,8 @@ function Menu() {
             ) : hasContent ? (
               <div>
                 {/* Secciones de Platillos */}
-                {Object.entries(groupedDishes).map(([catName, list], index) => (
-                  <div key={catName} className="menu-category-group" style={{ position: 'relative' }}>
-                    {activeMainTab === 'asiatico' && (
-                      <div className={`category-seal-watermark category-seal-watermark--${index % 2 === 0 ? 'left' : 'right'}`} aria-hidden="true">
-                        <img src="/images/logo_seal.png" alt="" />
-                      </div>
-                    )}
+                {Object.entries(groupedDishes).map(([catName, list]) => (
+                  <div key={catName} className="menu-category-group">
                     <h2 className="menu-category-subtitle">{catName}</h2>
                     <div className="menu-text-list">
                       {list.map((dish) => {
