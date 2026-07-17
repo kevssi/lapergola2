@@ -5,7 +5,7 @@ import { construirMigasPan } from '../utils/breadcrumbHistory.js';
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 import { obtenerPlatillos, beverages } from '../data.js';
-import { Sparkles, Coffee, Flame } from 'lucide-react';
+import { Sparkles, Coffee, Flame, Clock } from 'lucide-react';
 
 function Menu() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -203,6 +203,16 @@ function Menu() {
                 <Flame size={20} />
                 Comida Asiática
               </button>
+            </div>
+
+            {/* Banner de Horarios Dinámicos */}
+            <div className="menu-hours-banner">
+              <Clock size={16} style={{ marginRight: '0.4rem', verticalAlign: 'middle', display: 'inline-block' }} />
+              {activeMainTab === 'desayuno' ? (
+                <span>Horario de desayunos: <strong>8:00 AM – 2:00 PM</strong> | Cerrado los martes</span>
+              ) : (
+                <span>Horario de comida asiática: <strong>1:00 PM – 9:00 PM</strong> | Cerrado los martes</span>
+              )}
             </div>
           </div>
         </section>

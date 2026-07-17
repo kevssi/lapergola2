@@ -378,6 +378,35 @@ h1, h2, h3, h4, h5, h6 {
   border-color: rgba(255, 255, 255, 0.12);
 }
 
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  color: var(--gold);
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  margin-inline: auto;
+  animation: pulseGold 2s infinite alternate;
+}
+
+@keyframes pulseGold {
+  from {
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.08);
+    border-color: rgba(212, 175, 55, 0.25);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.22);
+    border-color: rgba(212, 175, 55, 0.45);
+  }
+}
+
 .hero-logo-img {
   height: 55px;
   width: auto;
@@ -2085,15 +2114,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .menu-page--breakfast .menu-text-item-name {
-  color: #2b221a !important;
+  color: #1a120b !important;
 }
 
 .menu-page--breakfast .menu-text-item-description {
-  color: #5c4e43 !important;
+  color: #382e25 !important;
 }
 
 .menu-page--breakfast .menu-text-item-ingredients {
-  color: #8c7a6b !important;
+  color: #594a3e !important;
 }
 
 .menu-page--breakfast .menu-text-item-leader {
@@ -2403,7 +2432,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #465b30;
   border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
   transform: rotate(-10deg);
-  opacity: 0.85;
+  opacity: 0.07;
 }
 
 .breakfast-curve-2 {
@@ -2415,7 +2444,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #5b753f;
   border-radius: 30% 70% 40% 60% / 50% 60% 40% 50%;
   transform: rotate(15deg);
-  opacity: 0.85;
+  opacity: 0.07;
 }
 
 .breakfast-curve-3 {
@@ -2427,7 +2456,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #3e502a;
   border-radius: 80% 20% 80% 20% / 80% 20% 80% 20%;
   transform: rotate(-25deg);
-  opacity: 0.9;
+  opacity: 0.07;
 }
 
 .breakfast-curve-4 {
@@ -2439,7 +2468,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #465b30;
   border-radius: 20% 80% 20% 80% / 20% 80% 20% 80%;
   transform: rotate(20deg);
-  opacity: 0.85;
+  opacity: 0.07;
 }
 
 .breakfast-curve-5 {
@@ -2451,7 +2480,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #5b753f;
   border-radius: 70% 30% 50% 50% / 60% 40% 60% 40%;
   transform: rotate(-15deg);
-  opacity: 0.85;
+  opacity: 0.07;
 }
 
 .breakfast-curve-6 {
@@ -2463,7 +2492,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #3e502a;
   border-radius: 40% 60% 30% 70% / 50% 50% 50% 50%;
   transform: rotate(12deg);
-  opacity: 0.85;
+  opacity: 0.07;
 }
 
 .breakfast-curve-7 {
@@ -2475,7 +2504,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #465b30;
   border-radius: 50% 50% 70% 30% / 40% 60% 40% 60%;
   transform: rotate(-8deg);
-  opacity: 0.9;
+  opacity: 0.07;
 }
 
 .breakfast-curve-8 {
@@ -2487,7 +2516,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #5b753f;
   border-radius: 60% 40% 40% 60% / 60% 60% 40% 40%;
   transform: rotate(8deg);
-  opacity: 0.85;
+  opacity: 0.07;
 }
 
 .breakfast-curve-left {
@@ -2499,7 +2528,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #465b30;
   border-radius: 40% 60% 0% 0% / 50% 50% 0% 0%;
   transform: rotate(12deg);
-  opacity: 0.9;
+  opacity: 0.07;
 }
 
 .breakfast-curve-right-1 {
@@ -2511,7 +2540,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #3e502a;
   border-radius: 65% 35% 0% 0% / 55% 45% 0% 0%;
   transform: rotate(-12deg);
-  opacity: 0.95;
+  opacity: 0.07;
 }
 
 .breakfast-curve-right-2 {
@@ -2523,7 +2552,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #5b753f;
   border-radius: 50% 50% 0% 0% / 40% 40% 0% 0%;
   transform: rotate(-5deg);
-  opacity: 0.8;
+  opacity: 0.07;
 }
 
 /* Staggered category seal watermarks for Asian menu layout */
@@ -2545,4 +2574,322 @@ h1, h2, h3, h4, h5, h6 {
   .category-seal-watermark {
     opacity: 0.03;
   }
+}
+
+/* ==========================================================================
+   Sección del Carrusel (Galería Premium)
+   ========================================================================== */
+.carousel-section {
+  padding: 6rem 0;
+  background-color: var(--bg-dark);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+/* Inset luxury frame overlay */
+.carousel-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  pointer-events: none;
+  z-index: 5;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.carousel-wrapper:hover::after {
+  border-color: rgba(212, 175, 55, 0.35);
+}
+
+.carousel-track-container {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+}
+
+/* Vignette shadow to darken the blurred edges and highlight the center */
+.carousel-track-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%);
+  pointer-events: none;
+  z-index: 4;
+}
+
+@media (max-width: 768px) {
+  .carousel-track-container {
+    height: 480px;
+  }
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-image-blur-bg {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(24px) brightness(0.35);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.carousel-image {
+  position: relative;
+  z-index: 3;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.85);
+  border-left: 1px solid rgba(212, 175, 55, 0.15);
+  border-right: 1px solid rgba(212, 175, 55, 0.15);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.carousel-slide:hover .carousel-image {
+  transform: scale(1.02);
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3rem 2rem 2rem;
+  background: linear-gradient(to top, rgba(12, 12, 11, 0.95) 0%, rgba(12, 12, 11, 0.7) 50%, rgba(12, 12, 11, 0) 100%);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.carousel-caption h3 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.carousel-caption p {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: 700px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 600px) {
+  .carousel-caption {
+    padding: 1.5rem 1rem 1rem;
+  }
+  .carousel-caption h3 {
+    font-size: 1.25rem;
+  }
+  .carousel-caption p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Controles de Dirección */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(22, 22, 20, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  opacity: 0;
+}
+
+.carousel-wrapper:hover .carousel-btn {
+  opacity: 1;
+}
+
+.carousel-btn:hover {
+  background: var(--gold);
+  color: var(--bg-dark);
+  border-color: var(--gold);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.carousel-btn--left {
+  left: 20px;
+}
+
+.carousel-btn--right {
+  right: 20px;
+}
+
+@media (max-width: 768px) {
+  .carousel-btn {
+    opacity: 1;
+    width: 40px;
+    height: 40px;
+  }
+  .carousel-btn--left {
+    left: 10px;
+  }
+  .carousel-btn--right {
+    right: 10px;
+  }
+}
+
+/* Indicadores de Puntos */
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.carousel-dot:hover {
+  background: rgba(255, 255, 255, 0.6);
+  transform: scale(1.2);
+}
+
+.carousel-dot.active {
+  background: var(--gold);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* Ornatos de hojas de oro en los costados */
+.carousel-seal-watermark {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 280px;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-leaf-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-seal-watermark--left {
+  left: 8%;
+}
+
+.carousel-seal-watermark--right {
+  right: 8%;
+}
+
+@media (max-width: 990px) {
+  .carousel-seal-watermark {
+    width: 50px;
+    height: 180px;
+  }
+  .carousel-seal-watermark--left {
+    left: 3%;
+  }
+  .carousel-seal-watermark--right {
+    right: 3%;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-seal-watermark {
+    display: none;
+  }
+}
+
+/* Banner de horarios dinámicos en la página de menú */
+.menu-hours-banner {
+  text-align: center;
+  margin-top: 1.25rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.menu-hours-banner strong {
+  color: var(--gold);
+}
+
+.menu-page--breakfast .menu-hours-banner {
+  color: #5c4e43;
+}
+
+.menu-page--breakfast .menu-hours-banner strong {
+  color: #9c7426;
 }
