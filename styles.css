@@ -2422,6 +2422,7 @@ h1, h2, h3, h4, h5, h6 {
 .asian-watermarks-container {
   position: absolute;
   inset: 0;
+  overflow: hidden;
   pointer-events: none;
   z-index: 1;
 }
