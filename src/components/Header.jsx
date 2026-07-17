@@ -37,7 +37,7 @@ function Header() {
 
   return (
     <>
-      <header className={`site-header ${isBreakfastActive ? 'site-header--breakfast' : ''}`}>
+      <header className={`site-header ${isBreakfastActive ? 'site-header--breakfast' : ''} ${isMobileMenuOpen ? 'site-header--menu-open' : ''}`}>
         <div className="header-inner container">
           <Link to="/" className="logo">
             <img src="/images/logo_clean.png" alt="La Pergola Logo" className="logo-img" />
