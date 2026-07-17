@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Breadcrumb({ items }) {
   return (
     <div className="breadcrumb container" aria-label="Breadcrumb">
@@ -15,7 +17,7 @@ function Breadcrumb({ items }) {
                 {crumb.name}
               </span>
             ) : (
-              <a href={crumb.href}>{crumb.name}</a>
+              <Link to={crumb.href}>{crumb.name}</Link>
             )}
           </li>
         ))}

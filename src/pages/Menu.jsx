@@ -4,7 +4,7 @@ import Breadcrumb from '../components/Breadcrumb.jsx';
 import { construirMigasPan } from '../utils/breadcrumbHistory.js';
 import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
-import { obtenerPlatillos, beverages } from '../data.js';
+import { obtenerPlatillos, beverages } from '../services/dataService.js';
 import { Sparkles, Coffee, Flame, Clock } from 'lucide-react';
 
 function Menu() {

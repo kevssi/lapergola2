@@ -42,7 +42,32 @@ export function construirSiguienteEnlace(nextPath, currentPath) {
   const params = new URLSearchParams(window.location.search);
   const from = params.get('from');
   const trail = from ? from.split(',').filter(Boolean) : [];
-  const newTrail = [...trail, currentPath];
+  
+  const nextBase = nextPath.split('?')[0];
+  const currentBase = currentPath.split('?')[0];
+  
+  let newTrail = [...trail];
+  
+  // Only push the current path if it's not the home page and not the same base as target
+  if (currentBase !== '/' && currentBase !== nextBase) {
+    const lastItem = newTrail[newTrail.length - 1];
+    const lastItemBase = lastItem ? lastItem.split('?')[0] : '';
+    if (lastItemBase !== currentBase) {
+      newTrail.push(currentPath);
+    }
+  } else if (currentBase === '/') {
+    // If we start from home, reset the trail to just home
+    newTrail = ['/'];
+  }
+  
+  // Truncate the trail if we are navigating back to a page already in the history
+  const targetIndex = newTrail.findIndex(path => path.split('?')[0] === nextBase);
+  if (targetIndex !== -1) {
+    newTrail = newTrail.slice(0, targetIndex);
+  }
+  
   const separator = nextPath.includes('?') ? '&' : '?';
-  return `${nextPath}${separator}from=${newTrail.join(',')}`;
+  return newTrail.length > 0 
+    ? `${nextPath}${separator}from=${newTrail.join(',')}` 
+    : nextPath;
 }

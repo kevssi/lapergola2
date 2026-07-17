@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { obtenerPlatillosDestacados } from './data.js';
+import { obtenerPlatillosDestacados } from './services/dataService.js';
 import Breadcrumb from './components/Breadcrumb.jsx';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
