@@ -1119,7 +1119,9 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
   color: var(--text-primary);
   cursor: pointer;
-  padding: 0.5rem;
+  width: 44px;
+  height: 44px;
+  padding: 0;
   z-index: 300;
   align-items: center;
   justify-content: center;
@@ -1138,22 +1140,16 @@ h1, h2, h3, h4, h5, h6 {
   backdrop-filter: blur(25px) saturate(160%);
   -webkit-backdrop-filter: blur(25px) saturate(160%);
   z-index: 250;
-  display: flex;
+  display: none;
   flex-direction: column;
   padding: 3rem 2rem;
   padding-top: calc(var(--header-h) + 2rem);
   gap: 2.5rem;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: auto;
 }
 
 .mobile-menu-overlay--open {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+  display: flex;
 }
 
 .mobile-menu-nav {
