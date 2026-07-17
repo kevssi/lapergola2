@@ -85,14 +85,20 @@ function Contacto() {
                 </span>
               </p>
               
-              <div className="map-placeholder">
+              <a
+                href="https://maps.google.com/?q=La+P%C3%A9rgola+Restaurante,+Avenida+5+de+Mayo+1813,+Residencias,+83448+San+Luis+R%C3%ADo+Colorado,+Son."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="map-placeholder"
+                style={{ display: 'block' }}
+              >
                 <div className="map-overlay">
                   <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                     <MapPin size={16} /> Ver en Google Maps
                   </span>
                 </div>
                 <img src="/images/restaurant_interior.png" alt="La Pergola Interior" />
-              </div>
+              </a>
             </div>
 
             <div className="info-card glass">
